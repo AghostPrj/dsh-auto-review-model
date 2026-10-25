@@ -1,10 +1,22 @@
 {
-  "name": "@local/dsh-auto-review-model",
+  "name": "@aghost-prj/dsh-auto-review-model",
   "version": "0.1.0",
   "description": "Pick a dedicated provider/model for DSH Auto-review authorization checks · 为 DSH 自动授权审查单独指定 provider/model",
   "type": "module",
   "main": "lib/index.js",
   "icon": "./icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AghostPrj/dsh-auto-review-model.git"
+  },
+  "homepage": "https://github.com/AghostPrj/dsh-auto-review-model#readme",
+  "bugs": {
+    "url": "https://github.com/AghostPrj/dsh-auto-review-model/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "exports": {
     ".": "./lib/index.js",
     "./policy": "./lib/policy.js",

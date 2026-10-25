@@ -1,4 +1,4 @@
-# @local/dsh-auto-review-model
+# @aghost-prj/dsh-auto-review-model
 
 为 DSH 的 **自动授权审查（Auto review）** 单独选择 provider / model / reasoningEffort，而不改变主对话使用的模型。
 
@@ -27,10 +27,14 @@ DSH 的 Auto review 在每次受支持的工具调用执行前，用当前会话
 ## 安装
 
 ```sh
+# 从 npm 官方仓库安装（发布后）：
+dsh plugin --profile web add @aghost-prj/dsh-auto-review-model
+
+# 或在本地开发调试阶段从本地路径安装：
 dsh plugin --profile web add /home/aghost/workspace/dsh-auto-approval-model-fix
 ```
 
-该命令把本地包作为依赖与 bundle 层加入 `web` profile。DSH loader 通过包内的 `dsh.bundle.patch` 读取 `cordis.patch.yml`，把插件插入为 `auto-review-model` 层。
+该命令把包作为依赖与 bundle 层加入 `web` profile。DSH loader 通过包内的 `dsh.bundle.patch` 读取 `cordis.patch.yml`，把插件插入为 `auto-review-model` 层。
 
 安装插件或重新构建客户端后，需要按 DSH 常规方式重新加载 Web profile 并刷新页面，配置页才会出现。保存设置本身对下一次审查生效，不需要重启会话。
 

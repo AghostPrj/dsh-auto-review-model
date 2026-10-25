@@ -1,5 +1,5 @@
 /**
- * Host entry for `@local/dsh-auto-review-model`.
+ * Host entry for `@aghost-prj/dsh-auto-review-model`.
  *
  * The plugin installs one globally prepended `llm/stream` waterfall listener.
  * When the experimental auto-review package asks the LLM service to classify a
@@ -14,7 +14,7 @@
  * rewriting it again. Each reviewer request is therefore rewritten exactly
  * once, with no recursion.
  *
- * @module @local/dsh-auto-review-model
+ * @module @aghost-prj/dsh-auto-review-model
  */
 import z from '@deepseek-ai/schemastery';
 import { effortCacheKey, isAutoReviewRequest, normalizeEffort, readReviewerSettings, shouldOverrideRoute } from './policy.js';

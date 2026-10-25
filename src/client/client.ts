@@ -152,7 +152,7 @@ type LoadResult =
     }
   | { ok: false; error: unknown };
 
-window.__ModuleLoader__.load({ id: '@local/dsh-auto-review-model', factory: (require: (specifier: string) => unknown): Record<string, unknown> => {
+window.__ModuleLoader__.load({ id: '@aghost-prj/dsh-auto-review-model', factory: (require: (specifier: string) => unknown): Record<string, unknown> => {
   const module: BundleModule = { exports: {} };
   const exports = module.exports;
   Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });

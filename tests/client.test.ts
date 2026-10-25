@@ -1,5 +1,5 @@
 /**
- * Client-half tests for `@local/dsh-auto-review-model`.
+ * Client-half tests for `@aghost-prj/dsh-auto-review-model`.
  *
  * The browser bundle is a plain CJS factory registered through
  * `window.__ModuleLoader__.load`. These tests emulate only the loader and the
@@ -81,7 +81,7 @@ let capturedEntry: ModuleLoaderEntry | null = null;
 
 let importError: Error | null = null;
 try {
-  const clientUrl = import.meta.resolve('@local/dsh-auto-review-model/client');
+  const clientUrl = import.meta.resolve('@aghost-prj/dsh-auto-review-model/client');
   await import(clientUrl);
 } catch (error) {
   importError = error as Error;
@@ -174,7 +174,7 @@ test.before(() => {
   );
   assert.ok(capturedEntry, 'client did not call window.__ModuleLoader__.load');
   const entry = capturedEntry as ModuleLoaderEntry;
-  assert.equal(entry.id, '@local/dsh-auto-review-model');
+  assert.equal(entry.id, '@aghost-prj/dsh-auto-review-model');
   assert.equal(typeof entry.factory, 'function');
   client = entry.factory((specifier: string): unknown => {
     assert.equal(specifier, 'react', 'the bundle may only require react');

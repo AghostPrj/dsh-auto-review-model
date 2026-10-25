@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Static and smoke verification for `@local/dsh-auto-review-model`.
+ * Static and smoke verification for `@aghost-prj/dsh-auto-review-model`.
  *
  * This script does not install anything and never invokes pnpm/DSH commands.
  * It checks the package metadata, the Cordis patch, the host/client source
@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 
 // Compiled file lives at .build/scripts/verify.js, so ROOT is ../../
 const ROOT = path.resolve(fileURLToPath(new URL('../../', import.meta.url)));
-const PACKAGE_NAME = '@local/dsh-auto-review-model';
+const PACKAGE_NAME = '@aghost-prj/dsh-auto-review-model';
 const TARGET_BUNDLE = '@deepseek-ai/dsh-experimental-auto-review';
 const SETTINGS_NS = 'auto-review-model';
 const REVIEW_POLICY_PREFIX = 'REVIEW_POLICY\n';
@@ -147,8 +147,8 @@ await check('cordis.patch.yml declares the loader row', () => {
     'cordis.patch.yml must contain "id: auto-review-model"',
   );
   assert(
-    /^\s*name:\s*['"]@local\/dsh-auto-review-model['"]\s*$/m.test(yml),
-    "cordis.patch.yml must contain name '@local/dsh-auto-review-model'",
+    /^\s*name:\s*['"]@aghost-prj\/dsh-auto-review-model['"]\s*$/m.test(yml),
+    "cordis.patch.yml must contain name '@aghost-prj/dsh-auto-review-model'",
   );
   return 'id auto-review-model';
 });

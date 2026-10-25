@@ -1,5 +1,5 @@
 /**
- * Host tests for `@local/dsh-auto-review-model`.
+ * Host tests for `@aghost-prj/dsh-auto-review-model`.
  *
  * The LLM service is faked with an in-process waterfall that mirrors the real
  * `ctx.llm.stream` contract: registered `llm/stream` listeners wrap a base
@@ -9,7 +9,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 
-import { Config, __testing, apply, inject, name } from '@local/dsh-auto-review-model';
+import { Config, __testing, apply, inject, name } from '@aghost-prj/dsh-auto-review-model';
 import {
   REVIEW_POLICY_MARKER,
   REVIEW_POLICY_PREFIX,
@@ -17,8 +17,8 @@ import {
   isAutoReviewRequest,
   normalizeEffort,
   readReviewerSettings,
-} from '@local/dsh-auto-review-model/policy';
-import type { ReviewerConfig } from '@local/dsh-auto-review-model/policy';
+} from '@aghost-prj/dsh-auto-review-model/policy';
+import type { ReviewerConfig } from '@aghost-prj/dsh-auto-review-model/policy';
 
 /** A realistic reviewer system prompt with the fixed policy prefix and marker. */
 const REVIEW_SYSTEM =

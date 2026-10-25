@@ -1,5 +1,5 @@
 /**
- * Component-level tests for ReviewerModelConfig and ARMSelect in `@local/dsh-auto-review-model`.
+ * Component-level tests for ReviewerModelConfig and ARMSelect in `@aghost-prj/dsh-auto-review-model`.
  *
  * Exercises the actual React component functions and event handlers using a minimal
  * deterministic React hook driver. Verifies:
@@ -53,7 +53,7 @@ let capturedEntry: ModuleLoaderEntry | null = null;
 
 let importError: Error | null = null;
 try {
-  const clientUrl = import.meta.resolve('@local/dsh-auto-review-model/client');
+  const clientUrl = import.meta.resolve('@aghost-prj/dsh-auto-review-model/client');
   await import(clientUrl);
 } catch (error) {
   importError = error as Error;

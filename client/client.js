@@ -1,5 +1,5 @@
 "use strict";
-window.__ModuleLoader__.load({ id: '@local/dsh-auto-review-model', factory: (require) => {
+window.__ModuleLoader__.load({ id: '@aghost-prj/dsh-auto-review-model', factory: (require) => {
         const module = { exports: {} };
         const exports = module.exports;
         Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });

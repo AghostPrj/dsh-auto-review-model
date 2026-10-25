@@ -1,5 +1,5 @@
 /**
- * Packaging tests for `@local/dsh-auto-review-model`.
+ * Packaging tests for `@aghost-prj/dsh-auto-review-model`.
  *
  * Verifies package manifest, Cordis patch specification, build artifacts,
  * and client/host entrypoints to ensure correct packaging and plugin registration.
@@ -11,7 +11,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const pkgPath = fileURLToPath(import.meta.resolve('@local/dsh-auto-review-model/package.json'));
+const pkgPath = fileURLToPath(import.meta.resolve('@aghost-prj/dsh-auto-review-model/package.json'));
 const PKG_ROOT = path.dirname(pkgPath);
 
 test('package.json exports and metadata match plugin requirements', () => {
@@ -20,7 +20,7 @@ test('package.json exports and metadata match plugin requirements', () => {
 
   const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
 
-  assert.equal(pkg.name, '@local/dsh-auto-review-model');
+  assert.equal(pkg.name, '@aghost-prj/dsh-auto-review-model');
   assert.equal(pkg.type, 'module');
   assert.equal(pkg.main, 'lib/index.js');
 
@@ -45,7 +45,7 @@ test('cordis.patch.yml and dsh.bundle.patch are aligned', () => {
 
   const patchContent = fs.readFileSync(patchPath, 'utf8');
   assert.match(patchContent, /id:\s*['"]?auto-review-model['"]?/);
-  assert.match(patchContent, /name:\s*['"]?@local\/dsh-auto-review-model['"]?/);
+  assert.match(patchContent, /name:\s*['"]?@aghost-prj\/dsh-auto-review-model['"]?/);
 });
 
 test('dsh.client and peerDependencies are cleaned of deprecated client runtime/slots packages', () => {
@@ -93,7 +93,7 @@ test('build artifacts client/client.js and lib/ exist with expected registration
   );
   assert.match(
     clientContent,
-    /id:\s*['"]@local\/dsh-auto-review-model['"]/,
-    'client/client.js entry id must be @local/dsh-auto-review-model',
+    /id:\s*['"]@aghost-prj\/dsh-auto-review-model['"]/,
+    'client/client.js entry id must be @aghost-prj/dsh-auto-review-model',
   );
 });

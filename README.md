@@ -1,4 +1,4 @@
-# @local/dsh-auto-review-model
+# @aghost-prj/dsh-auto-review-model
 
 Pick a dedicated provider / model / reasoning effort for DSH **Auto review** without changing the model used by the main conversation.
 
@@ -27,10 +27,14 @@ Regular chat, subagents, title generation, compaction, and other LLM requests ar
 ## Install
 
 ```sh
+# Install from npm registry (after published):
+dsh plugin --profile web add @aghost-prj/dsh-auto-review-model
+
+# Or install from local path for development:
 dsh plugin --profile web add /home/aghost/workspace/dsh-auto-approval-model-fix
 ```
 
-The command adds the local package as a dependency and bundle layer for the `web` profile. The DSH loader reads `cordis.patch.yml` through the package's `dsh.bundle.patch` and inserts the plugin as the `auto-review-model` layer.
+The command adds the package as a dependency and bundle layer for the `web` profile. The DSH loader reads `cordis.patch.yml` through the package's `dsh.bundle.patch` and inserts the plugin as the `auto-review-model` layer.
 
 After installing or rebuilding the client, reload the Web profile in the usual DSH way and refresh the page for the configuration panel to appear. Saving settings takes effect on the next review without requiring a session restart.
 
