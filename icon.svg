@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Auto review model shield with chip">
+  <defs>
+    <linearGradient id="shield" x1="12" y1="6" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4f8cff"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <path d="M32 5 54 13v17c0 13.2-8.8 24.4-22 29C18.8 54.4 10 43.2 10 30V13L32 5Z" fill="url(#shield)" stroke="#0b1f4d" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M32 11 48 17v13.2c0 10.4-6.7 19.4-16 23.3-9.3-3.9-16-12.9-16-23.3V17l16-6Z" fill="#0b1f4d" opacity=".16"/>
+  <g fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="24" y="24" width="16" height="16" rx="3"/>
+    <path d="M29 24v-4M35 24v-4M29 44v-4M35 44v-4M24 29h-4M24 35h-4M44 29h-4M44 35h-4"/>
+    <circle cx="32" cy="32" r="3.2" fill="#fff" stroke="none"/>
+    <path d="M32 28.8v-1.6M32 36.8v1.6M28.8 32h-1.6M36.8 32h1.6"/>
+  </g>
+</svg>
